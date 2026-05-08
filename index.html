@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Benony's Book</title>
+  <!-- logo -->
+  <link rel="icon" type="image/x-icon" href="beno-avatar.png">
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .title-font {
+      font-family: 'Playfair Display', serif;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+
+    .aurora {
+      position: fixed;
+      inset: auto;
+      border-radius: 9999px;
+      filter: blur(70px);
+      opacity: 0.45;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .grid-overlay {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.28) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.28) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 90%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body class="relative bg-[#f3efe7] text-neutral-800 overflow-hidden">
+
+  <div class="aurora -top-20 left-[-6rem] h-56 w-56 bg-amber-200"></div>
+  <div class="aurora top-32 right-[-5rem] h-72 w-72 bg-sky-200"></div>
+  <div class="aurora bottom-0 left-1/4 h-64 w-64 bg-rose-200"></div>
+  <div class="grid-overlay fixed inset-0 opacity-[0.22]"></div>
+
+  <!-- FULL SCREEN -->
+  <main class="relative z-10 h-screen w-full flex items-center justify-center px-3 py-3 sm:px-4 sm:py-4 lg:px-8 lg:py-6 overflow-hidden">
+
+    <!-- CARD -->
+    <section
+      class="
+        w-full
+        max-w-[30rem]
+        h-[calc(100dvh-1.5rem)]
+        max-h-[calc(100dvh-1.5rem)]
+        bg-white/85
+        backdrop-blur-xl
+        rounded-[28px]
+        shadow-[0_24px_80px_rgba(15,23,42,0.16)]
+        border
+        border-white/60
+        ring-1
+        ring-black/5
+        overflow-hidden
+        flex
+        flex-col
+        justify-between
+        gap-4
+        px-5
+        py-5
+        sm:px-6
+        sm:py-6
+        lg:max-w-[34rem]
+        lg:px-8
+        lg:py-7
+      "
+    >
+
+      <!-- TOP -->
+      <div>
+
+        <div class="flex justify-center">
+          <span class="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.28em] text-amber-700 shadow-sm sm:text-xs">
+            Personal Identity Card
+          </span>
+        </div>
+
+        <!-- PROFILE -->
+        <div class="flex justify-center mt-3 sm:mt-4">
+          <div
+            class="
+              w-20 h-20
+              sm:w-24 sm:h-24
+              rounded-full
+              overflow-hidden
+              border-[5px]
+              border-white
+              shadow-[0_16px_40px_rgba(15,23,42,0.2)]
+              ring-4
+              ring-amber-100/80
+            "
+          >
+            <img
+              src="beno-avatar.png"
+              alt="Foto Profil"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- TITLE -->
+        <div class="text-center mt-4 sm:mt-5">
+          <h1
+            class="
+              title-font
+              text-[1.55rem]
+              sm:text-3xl
+              lg:text-[2.6rem]
+              tracking-wide
+              leading-tight
+              text-neutral-900
+            "
+          >
+            Benony's Book
+          </h1>
+
+          <p class="mt-2.5 text-sm sm:text-base lg:text-lg font-semibold text-neutral-700">
+            Benony Gabriel
+          </p>
+
+          <p
+            class="
+              text-[12px]
+              sm:text-sm
+              lg:text-[0.98rem]
+              text-neutral-500
+              leading-relaxed
+              mt-2.5
+              px-1
+              sm:px-2
+            "
+          >
+            Buku ini milik Benony Gabriel.
+            Jika ditemukan mohon hubungi kontak di bawah ini.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CONTACT -->
+      <div class="space-y-2.5 sm:space-y-3">
+
+        <!-- PHONE -->
+        <div
+          class="
+            group
+            bg-gradient-to-r
+            from-neutral-50
+            to-white
+            border
+            border-neutral-200/80
+            rounded-2xl
+            px-4
+            py-2.5
+            sm:px-5
+            sm:py-3.5
+            shadow-sm
+            transition
+            duration-300
+            hover:-translate-y-0.5
+            hover:shadow-[0_18px_30px_rgba(15,23,42,0.08)]
+          "
+        >
+          <div class="flex items-start gap-3">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 ring-1 ring-emerald-100">
+              <span class="text-base">W</span>
+            </div>
+
+            <div class="min-w-0">
+              <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-neutral-500 sm:text-xs lg:text-sm">
+                Whatsapp
+              </p>
+
+              <p class="mt-1 font-medium text-sm sm:text-base lg:text-lg break-all text-neutral-800 group-hover:text-neutral-950">
+                +62 821-9091-9659
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- EMAIL -->
+        <div
+          class="
+            group
+            bg-gradient-to-r
+            from-neutral-50
+            to-white
+            border
+            border-neutral-200/80
+            rounded-2xl
+            px-4
+            py-2.5
+            sm:px-5
+            sm:py-3.5
+            shadow-sm
+            transition
+            duration-300
+            hover:-translate-y-0.5
+            hover:shadow-[0_18px_30px_rgba(15,23,42,0.08)]
+          "
+        >
+          <div class="flex items-start gap-3">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-50 text-sky-700 ring-1 ring-sky-100">
+              <span class="text-base">@</span>
+            </div>
+
+            <div class="min-w-0">
+              <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-neutral-500 sm:text-xs lg:text-sm">
+                Email
+              </p>
+
+              <p class="mt-1 font-medium text-sm sm:text-base lg:text-lg break-all text-neutral-800 group-hover:text-neutral-950">
+                <a href="mailto:benonygabriel17@gmail.com" class="hover:underline decoration-2 underline-offset-4">
+                  benonygabriel17@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- LINKEDIN -->
+        <div
+          class="
+            group
+            bg-gradient-to-r
+            from-neutral-50
+            to-white
+            border
+            border-neutral-200/80
+            rounded-2xl
+            px-4
+            py-2.5
+            sm:px-5
+            sm:py-3.5
+            shadow-sm
+            transition
+            duration-300
+            hover:-translate-y-0.5
+            hover:shadow-[0_18px_30px_rgba(15,23,42,0.08)]
+          "
+        >
+          <div class="flex items-start gap-3">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-indigo-700 ring-1 ring-indigo-100">
+              <span class="text-base">in</span>
+            </div>
+
+            <div class="min-w-0">
+              <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-neutral-500 sm:text-xs lg:text-sm">
+                LinkedIn
+              </p>
+
+              <a
+                href="https://www.linkedin.com/in/benonygabriel"
+                target="_blank"
+                rel="noreferrer"
+                class="
+                  mt-1
+                  block
+                  font-medium
+                  text-sm
+                  sm:text-base
+                  lg:text-lg
+                  break-all
+                  text-neutral-800
+                  hover:underline
+                  decoration-2
+                  underline-offset-4
+                  group-hover:text-neutral-950
+                "
+              >
+                linkedin.com/in/benonygabriel
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FOOTER -->
+      <div class="text-center pt-1.5">
+        <div class="w-16 sm:w-20 h-px bg-gradient-to-r from-transparent via-neutral-300 to-transparent mx-auto mb-2.5"></div>
+
+        <p class="inline-flex items-center rounded-full bg-neutral-100 px-4 py-2 text-[10px] sm:text-xs lg:text-sm italic text-neutral-500 ring-1 ring-black/5">
+          “All Great Leaders are Readers”
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
